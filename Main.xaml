@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1315,3110" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:f="clr-namespace:FedExLibrary;assembly=FedExLibrary" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ueabf="clr-namespace:UiPath.Excel.Activities.Business.Filter;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1792,3110" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:f="clr-namespace:FedExLibrary;assembly=FedExLibrary" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ueabf="clr-namespace:UiPath.Excel.Activities.Business.Filter;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -302,7 +302,7 @@
                                             </InArgument>
                                           </ui:LogMessage.Message>
                                         </ui:LogMessage>
-                                        <Sequence DisplayName="Fill in transit" sap:VirtualizedContainerService.HintSize="242,522" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                        <Sequence DisplayName="Fill in transit" sap:VirtualizedContainerService.HintSize="334,522" sap2010:WorkflowViewState.IdRef="Sequence_34">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -481,7 +481,7 @@
                                               </Sequence>
                                             </If.Else>
                                           </If>
-                                          <Sequence DisplayName="Fill Remaining" sap:VirtualizedContainerService.HintSize="476,646" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                          <Sequence DisplayName="Fill Remaining" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_18">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -555,7 +555,10 @@
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <Flowchart DisplayName="Email Flowchart" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+                                                      <Flowchart DisplayName="Email Flowchart" sap:VirtualizedContainerService.HintSize="1212,1368" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+                                                        <Flowchart.Variables>
+                                                          <Variable x:TypeArguments="x:String" Name="str_ReturnPDF" />
+                                                        </Flowchart.Variables>
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -632,6 +635,18 @@
                                                                           </InArgument>
                                                                         </ui:LogMessage.Message>
                                                                       </ui:LogMessage>
+                                                                      <Assign sap:VirtualizedContainerService.HintSize="997,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                                                        <Assign.To>
+                                                                          <OutArgument x:TypeArguments="x:String">
+                                                                            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">str_ReturnPDF</CSharpReference>
+                                                                          </OutArgument>
+                                                                        </Assign.To>
+                                                                        <Assign.Value>
+                                                                          <InArgument x:TypeArguments="x:String">
+                                                                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_287">"\\\\fs03-cloud\\TFSB-ITFedex label\\FedEx For Terminated Users\\FedEx Ship Manager - Print Your Label " + CurrentRow.ByField["End User"] + ".pdf"</CSharpValue>
+                                                                          </InArgument>
+                                                                        </Assign.Value>
+                                                                      </Assign>
                                                                       <ui:FileExistsX DisplayName="File Exists" sap:VirtualizedContainerService.HintSize="997,132" sap2010:WorkflowViewState.IdRef="FileExistsX_2">
                                                                         <ui:FileExistsX.Exists>
                                                                           <OutArgument x:TypeArguments="x:Boolean">
@@ -640,7 +655,7 @@
                                                                         </ui:FileExistsX.Exists>
                                                                         <ui:FileExistsX.Path>
                                                                           <InArgument x:TypeArguments="x:String">
-                                                                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_80">"Z:\\Fedex label\\FedEx For Terminated Users\\FedEx Ship Manager - Print Your Label " + CurrentRow.ByField["End User"] + ".pdf"</CSharpValue>
+                                                                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_288">str_ReturnPDF</CSharpValue>
                                                                           </InArgument>
                                                                         </ui:FileExistsX.Path>
                                                                       </ui:FileExistsX>
@@ -672,7 +687,7 @@
                                                                               <umab:SendMailX.Files>
                                                                                 <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
                                                                                   <InArgument x:TypeArguments="x:String">
-                                                                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_253">"Z:\\Fedex label\\FedEx For Terminated Users\\FedEx Ship Manager - Print Your Label " + CurrentRow.ByField["End User"] + ".pdf"</CSharpValue>
+                                                                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_289">str_ReturnPDF</CSharpValue>
                                                                                   </InArgument>
                                                                                 </scg:List>
                                                                               </umab:SendMailX.Files>
@@ -807,6 +822,18 @@
                                                                           </InArgument>
                                                                         </ui:LogMessage.Message>
                                                                       </ui:LogMessage>
+                                                                      <Assign sap:VirtualizedContainerService.HintSize="997,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                                                        <Assign.To>
+                                                                          <OutArgument x:TypeArguments="x:String">
+                                                                            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_24">str_ReturnPDF</CSharpReference>
+                                                                          </OutArgument>
+                                                                        </Assign.To>
+                                                                        <Assign.Value>
+                                                                          <InArgument x:TypeArguments="x:String">
+                                                                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_293">"\\\\fs03-cloud\\TFSB-IT\\Fedex label\\JESUS' Fedex\\" + CurrentRow.ByField["FedEx Label"].ToString() + " " + CurrentRow.ByField["End User"].ToString() + ".pdf"</CSharpValue>
+                                                                          </InArgument>
+                                                                        </Assign.Value>
+                                                                      </Assign>
                                                                       <ui:FileExistsX DisplayName="File Exists" sap:VirtualizedContainerService.HintSize="997,132" sap2010:WorkflowViewState.IdRef="FileExistsX_5">
                                                                         <ui:FileExistsX.Exists>
                                                                           <OutArgument x:TypeArguments="x:Boolean">
@@ -815,7 +842,7 @@
                                                                         </ui:FileExistsX.Exists>
                                                                         <ui:FileExistsX.Path>
                                                                           <InArgument x:TypeArguments="x:String">
-                                                                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_198">"Z:\\Fedex label\\JESUS' Fedex\\" + CurrentRow.ByField["FedEx Label"] + " " + CurrentRow.ByField["End User"] + ".pdf"</CSharpValue>
+                                                                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_291">str_ReturnPDF</CSharpValue>
                                                                           </InArgument>
                                                                         </ui:FileExistsX.Path>
                                                                       </ui:FileExistsX>
@@ -846,7 +873,7 @@
                                                                               <umab:SendMailX.Files>
                                                                                 <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
                                                                                   <InArgument x:TypeArguments="x:String">
-                                                                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_263">"Z:\\Fedex label\\JESUS' Fedex\\" + CurrentRow.ByField["FedEx Label"] + " " + CurrentRow.ByField["End User"] + ".pdf"</CSharpValue>
+                                                                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_294">str_ReturnPDF</CSharpValue>
                                                                                   </InArgument>
                                                                                 </scg:List>
                                                                               </umab:SendMailX.Files>
@@ -1300,15 +1327,27 @@
                                                                                       </InArgument>
                                                                                     </ui:LogMessage.Message>
                                                                                   </ui:LogMessage>
-                                                                                  <ui:FileExistsX DisplayName="File Exists" sap:VirtualizedContainerService.HintSize="997,132" sap2010:WorkflowViewState.IdRef="FileExistsX_3">
+                                                                                  <Assign sap:VirtualizedContainerService.HintSize="997,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                                                                    <Assign.To>
+                                                                                      <OutArgument x:TypeArguments="x:String">
+                                                                                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_25">str_ReturnPDF</CSharpReference>
+                                                                                      </OutArgument>
+                                                                                    </Assign.To>
+                                                                                    <Assign.Value>
+                                                                                      <InArgument x:TypeArguments="x:String">
+                                                                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_295">"\\\\fs03-cloud\\TFSB-ITFedex label\\FedEx For Terminated Users\\FedEx Ship Manager - Print Your Label " + CurrentRow.ByField["End User"] + ".pdf"</CSharpValue>
+                                                                                      </InArgument>
+                                                                                    </Assign.Value>
+                                                                                  </Assign>
+                                                                                  <ui:FileExistsX DisplayName="File Exists" sap:VirtualizedContainerService.HintSize="997,132" sap2010:WorkflowViewState.IdRef="FileExistsX_6">
                                                                                     <ui:FileExistsX.Exists>
                                                                                       <OutArgument x:TypeArguments="x:Boolean">
-                                                                                        <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_15">bool_FileTest</CSharpReference>
+                                                                                        <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_26">bool_FileTest</CSharpReference>
                                                                                       </OutArgument>
                                                                                     </ui:FileExistsX.Exists>
                                                                                     <ui:FileExistsX.Path>
                                                                                       <InArgument x:TypeArguments="x:String">
-                                                                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_127">"Z:\\Fedex label\\FedEx For Terminated Users\\FedEx Ship Manager - Print Your Label " + CurrentRow.ByField["End User"] + ".pdf"</CSharpValue>
+                                                                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_296">str_ReturnPDF</CSharpValue>
                                                                                       </InArgument>
                                                                                     </ui:FileExistsX.Path>
                                                                                   </ui:FileExistsX>
@@ -1352,7 +1391,7 @@
                                                                                           <umab:SendMailX.Files>
                                                                                             <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
                                                                                               <InArgument x:TypeArguments="x:String">
-                                                                                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_130">"Z:\\Fedex label\\FedEx For Terminated Users\\FedEx Ship Manager - Print Your Label " + CurrentRow.ByField["End User"] + ".pdf"</CSharpValue>
+                                                                                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_297">str_ReturnPDF</CSharpValue>
                                                                                               </InArgument>
                                                                                             </scg:List>
                                                                                           </umab:SendMailX.Files>
@@ -1468,7 +1507,7 @@
                                                                                     <av:Size x:Key="ShapeSize">200,66</av:Size>
                                                                                   </scg:Dictionary>
                                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                                <Sequence DisplayName="Swap Day 6" sap:VirtualizedContainerService.HintSize="1039,1349" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                                                                <Sequence DisplayName="Swap Day 6" sap:VirtualizedContainerService.HintSize="1039,1449" sap2010:WorkflowViewState.IdRef="Sequence_42">
                                                                                   <Sequence.Variables>
                                                                                     <Variable x:TypeArguments="x:Boolean" Name="bool_FileTest" />
                                                                                   </Sequence.Variables>
@@ -1484,15 +1523,27 @@
                                                                                       </InArgument>
                                                                                     </ui:LogMessage.Message>
                                                                                   </ui:LogMessage>
-                                                                                  <ui:FileExistsX DisplayName="File Exists" sap:VirtualizedContainerService.HintSize="997,132" sap2010:WorkflowViewState.IdRef="FileExistsX_4">
+                                                                                  <Assign sap:VirtualizedContainerService.HintSize="997,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                                                                    <Assign.To>
+                                                                                      <OutArgument x:TypeArguments="x:String">
+                                                                                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_27">str_ReturnPDF</CSharpReference>
+                                                                                      </OutArgument>
+                                                                                    </Assign.To>
+                                                                                    <Assign.Value>
+                                                                                      <InArgument x:TypeArguments="x:String">
+                                                                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_298">"\\\\fs03-cloud\\TFSB-IT\\Fedex label\\JESUS' Fedex\\" + CurrentRow.ByField["FedEx Label"].ToString() + " " + CurrentRow.ByField["End User"].ToString() + ".pdf"</CSharpValue>
+                                                                                      </InArgument>
+                                                                                    </Assign.Value>
+                                                                                  </Assign>
+                                                                                  <ui:FileExistsX DisplayName="File Exists" sap:VirtualizedContainerService.HintSize="997,132" sap2010:WorkflowViewState.IdRef="FileExistsX_7">
                                                                                     <ui:FileExistsX.Exists>
                                                                                       <OutArgument x:TypeArguments="x:Boolean">
-                                                                                        <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">bool_FileTest</CSharpReference>
+                                                                                        <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_28">bool_FileTest</CSharpReference>
                                                                                       </OutArgument>
                                                                                     </ui:FileExistsX.Exists>
                                                                                     <ui:FileExistsX.Path>
                                                                                       <InArgument x:TypeArguments="x:String">
-                                                                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_169">"Z:\\Fedex label\\JESUS' Fedex\\" + CurrentRow.ByField["FedEx Label"] + " " + CurrentRow.ByField["End User"] + ".pdf"</CSharpValue>
+                                                                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_299">str_ReturnPDF</CSharpValue>
                                                                                       </InArgument>
                                                                                     </ui:FileExistsX.Path>
                                                                                   </ui:FileExistsX>
@@ -1535,7 +1586,7 @@
                                                                                           <umab:SendMailX.Files>
                                                                                             <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
                                                                                               <InArgument x:TypeArguments="x:String">
-                                                                                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_173">"Z:\\Fedex label\\JESUS' Fedex\\" + CurrentRow.ByField["FedEx Label"] + " " + CurrentRow.ByField["End User"] + ".pdf"</CSharpValue>
+                                                                                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_300">str_ReturnPDF</CSharpValue>
                                                                                               </InArgument>
                                                                                             </scg:List>
                                                                                           </umab:SendMailX.Files>
